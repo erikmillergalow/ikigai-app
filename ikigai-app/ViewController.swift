@@ -8,13 +8,27 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIScrollViewDelegate {
 
+    //MARK: Properties
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var ikigaiDiagram: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        scrollView.minimumZoomScale = 1.0
+        scrollView.maximumZoomScale = 4.0
+        
     }
 
-
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return ikigaiDiagram
+    }
+    
+    //MARK: Actions
+    
+    
 }
 
