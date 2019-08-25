@@ -15,8 +15,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var ikigaiDiagram: UIImageView!
     @IBOutlet weak var textView: UITextView!
     
-    var pinView: UIImageView!
-    
+    var pinView: UIImageView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,9 +53,13 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
         let cgPoint = tapGestureRecognizer.location(in: ikigaiDiagram)
         
-        pinView = UIImageView(frame: CGRect(x: cgPoint.x, y:cgPoint.y, width: 15, height: 15))
-        pinView.image = UIImage(named: "pin")
-        ikigaiDiagram.addSubview(pinView)
+        if (self.pinView?.image != nil) {
+            self.pinView?.image = nil
+        }
+        
+        self.pinView = UIImageView(frame: CGRect(x: cgPoint.x, y:cgPoint.y, width: 15, height: 15))
+        self.pinView?.image = UIImage(named: "pin")
+        ikigaiDiagram.addSubview(pinView!)
         
         print(cgPoint)
     }
