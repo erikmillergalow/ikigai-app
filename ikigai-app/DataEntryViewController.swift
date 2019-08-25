@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIScrollViewDelegate {
+class DataEntryViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!

@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		357473202312595700BC8A68 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3574731F2312595700BC8A68 /* SignInViewController.swift */; };
+		35747322231259F800BC8A68 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35747321231259F700BC8A68 /* CalendarViewController.swift */; };
+		357473242312687F00BC8A68 /* SegueLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357473232312687F00BC8A68 /* SegueLeft.swift */; };
+		3574732623126A9800BC8A68 /* SegueRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3574732523126A9800BC8A68 /* SegueRight.swift */; };
 		35F984A522E2CBD100966AB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F984A422E2CBD100966AB4 /* AppDelegate.swift */; };
-		35F984A722E2CBD100966AB4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F984A622E2CBD100966AB4 /* ViewController.swift */; };
+		35F984A722E2CBD100966AB4 /* DataEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F984A622E2CBD100966AB4 /* DataEntryViewController.swift */; };
 		35F984AA22E2CBD100966AB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35F984A822E2CBD100966AB4 /* Main.storyboard */; };
 		35F984AC22E2CBD200966AB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35F984AB22E2CBD200966AB4 /* Assets.xcassets */; };
 		35F984AF22E2CBD200966AB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35F984AD22E2CBD200966AB4 /* LaunchScreen.storyboard */; };
@@ -34,9 +38,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3574731F2312595700BC8A68 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		35747321231259F700BC8A68 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		357473232312687F00BC8A68 /* SegueLeft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueLeft.swift; sourceTree = "<group>"; };
+		3574732523126A9800BC8A68 /* SegueRight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueRight.swift; sourceTree = "<group>"; };
 		35F984A122E2CBD100966AB4 /* ikigai-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ikigai-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35F984A422E2CBD100966AB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		35F984A622E2CBD100966AB4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		35F984A622E2CBD100966AB4 /* DataEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataEntryViewController.swift; sourceTree = "<group>"; };
 		35F984A922E2CBD100966AB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		35F984AB22E2CBD200966AB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35F984AE22E2CBD200966AB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,11 +106,15 @@
 			isa = PBXGroup;
 			children = (
 				35F984A422E2CBD100966AB4 /* AppDelegate.swift */,
-				35F984A622E2CBD100966AB4 /* ViewController.swift */,
+				35F984A622E2CBD100966AB4 /* DataEntryViewController.swift */,
 				35F984A822E2CBD100966AB4 /* Main.storyboard */,
+				357473232312687F00BC8A68 /* SegueLeft.swift */,
+				3574731F2312595700BC8A68 /* SignInViewController.swift */,
+				35747321231259F700BC8A68 /* CalendarViewController.swift */,
 				35F984AB22E2CBD200966AB4 /* Assets.xcassets */,
 				35F984AD22E2CBD200966AB4 /* LaunchScreen.storyboard */,
 				35F984B022E2CBD200966AB4 /* Info.plist */,
+				3574732523126A9800BC8A68 /* SegueRight.swift */,
 			);
 			path = "ikigai-app";
 			sourceTree = "<group>";
@@ -256,8 +268,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35F984A722E2CBD100966AB4 /* ViewController.swift in Sources */,
+				35747322231259F800BC8A68 /* CalendarViewController.swift in Sources */,
+				35F984A722E2CBD100966AB4 /* DataEntryViewController.swift in Sources */,
+				357473242312687F00BC8A68 /* SegueLeft.swift in Sources */,
 				35F984A522E2CBD100966AB4 /* AppDelegate.swift in Sources */,
+				3574732623126A9800BC8A68 /* SegueRight.swift in Sources */,
+				357473202312595700BC8A68 /* SignInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
