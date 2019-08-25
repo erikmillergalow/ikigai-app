@@ -53,6 +53,7 @@
                         <outlet property="dateLabel" destination="KJN-eS-nja" id="5ai-4M-wYw"/>
                         <outlet property="ikigaiDiagram" destination="wby-WY-VEa" id="nDz-5N-gIK"/>
                         <outlet property="scrollView" destination="T90-2y-2xL" id="RAB-go-ZYF"/>
+                        <outlet property="textView" destination="hXS-VP-gDg" id="Dhr-bB-9pW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
