@@ -15,6 +15,8 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var ikigaiDiagram: UIImageView!
     @IBOutlet weak var textView: UITextView!
     
+    var pinView: UIImageView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,12 +36,29 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         
         let dateString = dateFormatter.string(from: Date() as Date)
         
+        // accept user tap gestures
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self,  action: #selector(imageTapped(tapGestureRecognizer:)))
+ 
+        ikigaiDiagram.isUserInteractionEnabled = true
+        ikigaiDiagram.addGestureRecognizer(tapGestureRecognizer)
+        
         dateLabel.text = String(dateString)
     }
 
     // allow zooming in on diagram
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return ikigaiDiagram
+    }
+    
+    // process tap gesture
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
+        let cgPoint = tapGestureRecognizer.location(in: ikigaiDiagram)
+        
+        pinView = UIImageView(frame: CGRect(x: cgPoint.x, y:cgPoint.y, width: 15, height: 15))
+        pinView.image = UIImage(named: "pin")
+        ikigaiDiagram.addSubview(pinView)
+        
+        print(cgPoint)
     }
     
 }
