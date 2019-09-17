@@ -36,11 +36,7 @@ class DataEntryViewController: UIViewController, UIScrollViewDelegate {
         ikigaiDiagram.isUserInteractionEnabled = true
         ikigaiDiagram.addGestureRecognizer(tapGestureRecognizer)
         
-        print(dateString)
-        
-        //if let date = dateString {
         self.dateLabel.text = dateString
-        //}
     }
 
     // allow zooming in on diagram
