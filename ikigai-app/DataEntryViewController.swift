@@ -17,6 +17,8 @@ class DataEntryViewController: UIViewController, UIScrollViewDelegate {
     
     var pinView: UIImageView?
     
+    var dateString = String()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,20 +30,13 @@ class DataEntryViewController: UIViewController, UIScrollViewDelegate {
         textView.layer.borderColor = UIColor.lightGray.cgColor
         textView.layer.borderWidth = 1
         
-        // set the date
-        let dateFormatter = DateFormatter()
-        dateFormatter.timeStyle = .none
-        dateFormatter.dateStyle = .medium
-        
-        let dateString = dateFormatter.string(from: Date() as Date)
-        
         // accept user tap gestures
         let tapGestureRecognizer = UITapGestureRecognizer(target: self,  action: #selector(imageTapped(tapGestureRecognizer:)))
  
         ikigaiDiagram.isUserInteractionEnabled = true
         ikigaiDiagram.addGestureRecognizer(tapGestureRecognizer)
         
-        dateLabel.text = String(dateString)
+        self.dateLabel.text = dateString
     }
 
     // allow zooming in on diagram

@@ -83,10 +83,10 @@
             </objects>
             <point key="canvasLocation" x="-1417.3913043478262" y="138.61607142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--Calendar View Controller-->
         <scene sceneID="kV7-vM-AUG">
             <objects>
-                <viewController id="1eg-bG-7iM" sceneMemberID="viewController">
+                <viewController id="1eg-bG-7iM" customClass="CalendarViewController" customModule="ikigai_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Kz-mC-Udy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -97,6 +97,11 @@
                                 <date key="date" timeIntervalSinceReferenceDate="588406184.19171405">
                                     <!--2019-08-25 06:09:44 +0000-->
                                 </date>
+                                <connections>
+                                    <action selector="datePickerSelection:" destination="feo-Mv-AaL" eventType="valueChanged" id="AVe-wD-1ne"/>
+                                    <action selector="dateSelect:" destination="feo-Mv-AaL" eventType="valueChanged" id="zNP-vS-Fq3"/>
+                                    <action selector="selectedDate:" destination="feo-Mv-AaL" eventType="valueChanged" id="sjW-lk-bCd"/>
+                                </connections>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B8C-lu-IZZ">
                                 <rect key="frame" x="223" y="793" width="171" height="69"/>
@@ -105,7 +110,8 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" customClass="SequeRight" customModule="ikigai_app" customModuleProvider="target" id="faa-X2-eYM"/>
+                                    <action selector="forwardButtonPressed:" destination="feo-Mv-AaL" eventType="touchUpInside" id="QTY-7D-QVk"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="calendarToDataEntry" customClass="SequeRight" customModule="ikigai_app" customModuleProvider="target" id="oKF-1e-ZKz"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAs-q2-Gkd">
@@ -122,8 +128,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Lmu-zM-Tfu"/>
                     </view>
+                    <connections>
+                        <outlet property="datePicker" destination="l0g-Gu-40c" id="VxU-HA-B1u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EOp-NX-TEZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="feo-Mv-AaL" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-549.27536231884062" y="138.61607142857142"/>
         </scene>
@@ -193,6 +203,7 @@
         <image name="ikigai" width="1124" height="1063"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Khe-KJ-c3x"/>
+        <segue reference="oKF-1e-ZKz"/>
+        <segue reference="cLL-71-9by"/>
     </inferredMetricsTieBreakers>
 </document>
